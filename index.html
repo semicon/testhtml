@@ -1,190 +1,134 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAYMENT BANK🏛️ PAPER WORK ช่องทางชำระเงิน PAPER WORK</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/allaboutitappscript/fontbank/banks.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-</head>
-    <style>
-        * {
-  padding: 0;
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PAYMENT PAPER WORK.QR CODE</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/allaboutitappscript/fontbank/banks.min.css">
+   </head>
+   <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  background : #990000 ;
-
-.container {
-  width: 95%;
-  max-width: 1140px;
-  margin: auto;
-}
-.grid-row {
+html,body{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
-}
-.flex-row {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
-}
-.card {
-  padding: 10px;
-  background: rgb(000,CC0000,252);
-  background: linear-gradient(
-38deg
-, rgba(229,228,252, 1), rgb(255 255 255) 51%);
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
-  margin-bottom: 20px;
-}
-.card-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-}
-.card-bg-img img {
-  display: block;
+  height: 100%;
   width: 100%;
-  max-width: 200px;
-  border-radius: 10px;
-  animation: scaleAnim 10s ease-in-out infinite;
+  place-items: center;
+  background: linear-gradient(375deg, #000000, #CC0000);
 }
-@keyframes scaleAnim {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5) rotate(360deg);
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-}
-.card-bg-img {
-  filter: blur(50px);
-}
-.flex-row > div {
-  min-width: 180px;
-}
-.profile-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.profile-img img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.social {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.social li {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-45deg
-, #000, #FF0000);
-  border-radius: 3px;
-}
-.social li a {
+::selection{
   color: #fff;
+  background: #1cc7d0;
+}
+.wrapper{
+  height: 400px;
+  min-width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+ perspective: 1000px;
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #000000, #CC0000);
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 30px;
+  font-weight: 500;
+}
+.back-face ul{
+  display: flex;
+}
+.back-face ul a{
+  display: block;
+  height: 37px;
+  width: 37px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 49px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #CC0000, #000000);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
+  color: #CC0000;
+  border-color: #CC0000;
+  background: linear-gradient(375deg, transparent, transparent);
 }
 
-@media screen and (max-width: 1060px) and (min-width:900px) {
-  h2 {
-    font-size: 20px;
-  }  
-  p {
-    font-size: 14px;
+@media screen and (max-width: 768px) {
+  .wrapper{
+    width: 100%;
   }
 }
-
-@media screen and (max-width: 899px) and (min-width:768px) {
-  .flex-row > div {
-    min-width: 150px;
-  }
-  h2 {
-    font-size: 16px;
-  }  
-  p {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 767px) and (min-width:521px) {
-  .grid-row {
-    display: block;
-  }
-}
-@media screen and (max-width: 520px) and (min-width:200px) {
-  .grid-row, .flex-row {
-    display: block;
-  }
-  .card-bg-img img {
-      max-width: unset;
-  }
-  .card-info-inner {
-      display: block;
-      margin-top: 10px;
-  }
-        }
-    </style>
-<body>
-  <div class="container">
-    <div class="cards grid-row">
-      <div class="card flex-row colmun">
-        <div class="col-left card-image">
-          <div class="card-bg-img">
-            <img  src="https://img5.pic.in.th/file/secure-sv1/1000004437.png" alt="PAYMENT PAPER WORK">
-          </div>
-          <div class="profile-img">
-            <img src="https://img5.pic.in.th/file/secure-sv1/1000004437.png" alt="PAYMENT PAPER WORK">
-          </div>
-        </div>
-        <div class="col-right card-info">
-          <div class="card-info-inner">
-            <h2>NARINPAT MEECHAI </h2>
-            <p>1. ก่อนกดยืนยัน กรุณาตรวจสอบข้อมูลก่อนทุกครั้ง</p>
-              <p>2. ชื่อบัญชีต้องเป็น <span style="color:red;"><u> นรินทร์ภัทร มีชัย</u></span>  เท่านั้น</p>
-            <p>3. สามารถคลิ๊กที่ไอคอนด้านล่าง เพื่อเปิดคิวอาร์โค้ด หรือ ชำระเงินผ่านแอพพลิเคชั่นโดยตรง</p>
-            <ul class="social">
-              <li><a href="https://img5.pic.in.th/file/secure-sv1/1000004444034c8d3be7777648.png"alt="PROMPT PAY BANK PAPER WORK"><i class="bank bank-pp xxxl round shadow"></i></a></li>
-              <li><a href="https://img2.pic.in.th/pic/1000004443.png"alt="PROMPRPAY WALLET  PAPER WORK"><i class="bank bank-tmn xxxl round shadow"></i></a></li>
-              <li><a href="https://tmn.app.link/9zb3AXwKFPb"><i class="bank bank-tmn xxxl round shadow"></i></a></li>
-            
+   </style>
+   <body>
+      <div class="wrapper">
+         <div class="card front-face">
+            <img src="https://img5.pic.in.th/file/secure-sv1/1000004442.png">
+         </div>
+         <div class="card back-face">
+            <img src="https://img5.pic.in.th/file/secure-sv1/1000004329b85f758058861756.jpg">
+            <div class="info">
+               <div class="title">
+                  NARINPAT MEECHAI
+               </div>
+               <p>
+                  ชื่อบัญชีต้องเป็น <b> นรินทร์ภัทร มีชัย </b> เท่านั้น <br>ช่องทางชำระเงินด้วยคิวอาร์โค้ดอื่นๆ ของ PAPER WORK 
+               </p>
+            </div>
+            <ul>
+               <a href="https://liff.line.me/2006731030-V7AWZeQz"><i class="bank bank-pp xxxl round shadow"></i></a>
+               <a href="https://liff.line.me/2006731036-R89Ae76Y"><i class="bank bank-tmn xxxl round shadow"></i></a>
+               <a href="https://tmn.app.link/9zb3AXwKFPb"><i class="bank bank-tmn  xxxl round shadow"></i></a>
+               
             </ul>
-          </div>
-        </div>
+         </div>
       </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-  </html>
+   </body>
+</html>
